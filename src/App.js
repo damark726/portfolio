@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
-import Main from './components/Main';
-import Projects from './components/Projects';
-import About from './components/About';
+import React, {Component} from "react";
+// import {BrowserRouter, Switch, Route} from "react-router-dom";
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import Main from "./components/Main";
+import Projects from "./components/Projects";
+import About from "./components/About";
 
 export default class App extends Component {
   constructor() {

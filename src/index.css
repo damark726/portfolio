@@ -4,7 +4,7 @@ html, body {
 
 @font-face {
   font-family: custom-font;
-  src: url("./media/font2.ttf");
+  src: url("./media/font.ttf");
 }
 
 body {
@@ -260,4 +260,13 @@ body {
 #fun-facts1 {
   font-size: 1.25em;
   text-decoration: underline;
+}
+
+.css-projects-leave {
+  opacity: 1;
+}
+
+.css-projects-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s;
 }

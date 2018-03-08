@@ -33,7 +33,7 @@ export default class About extends Component {
     return(
       <div id="fun-facts">
         <div id="fun-facts1">Fun Facts:</div>
-        <div>Fluent in Albanian and Serbo-Croatian / Montenegrin, avid soccer player & fan, love playing video games, watching anime, reading manga, listening to music, and basically any other sport you can think of.</div>
+        <div>Proficient in Albanian and Serbo-Croatian / Montenegrin, avid soccer player & fan, love playing video games, watching anime, reading manga, listening to music, and basically any other sport you can think of.</div>
       </div>
     )
   }
