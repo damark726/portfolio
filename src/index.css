@@ -1,5 +1,5 @@
 /* CSS for laptop/computer screen */
-@media (min-width: 1030px) and (orientation: landscape) {
+@media (min-width: 900px) and (orientation: landscape) {
 
   html, body {
     height: 100vh;
@@ -25,7 +25,7 @@
     border: 2px solid #ffffff;
     border-radius: 20px;
     background-color: #ffffff;
-    font-size: 20px;
+    font-size: 1.5vw;
     color: #515151;
     transition: all 0.3s;
     box-shadow: 3px 3px 3px #000000;
@@ -66,8 +66,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: #666666;
     z-index: -1;
     opacity: 0.5;
@@ -78,7 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
+    font-size: 4vw;
     text-shadow: 3px 3px 5px #000000;
     font-family: custom-font;
   }
@@ -93,7 +93,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    font-size: 2.5em;
+    font-size: 2.5vw;
     text-shadow: 3px 3px 5px #000000;
     font-family: custom-font;
   }
@@ -103,19 +103,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 2vw;
     text-shadow: 3px 3px 5px #000000;
   }
 
-  #github {
-    grid-area: 18 / 6 / span 2 / span 2;
+  #linkedin {
+    grid-area: 18 / 4 / span 2 / span 2;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  #linkedin {
-    grid-area: 18 / 4 / span 2 / span 2;
+  #github {
+    grid-area: 18 / 6 / span 2 / span 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,6 +127,7 @@
     width: 100%;
     height: 100%;
     grid-template: repeat(20, 1fr) / repeat(10, 1fr);
+    font-size: 1.125vw;
   }
   /*============================================================================*/
   #active-title-recent-projects, #active-title-about-me {
@@ -137,7 +138,7 @@
   }
 
   .active-span {
-    font-size: 2.25em;
+    font-size: 2.25vw;
     color: #ffffff;
     text-shadow: 3px 3px 3px #000000;
   }
@@ -155,7 +156,7 @@
     border: 2px solid #ffffff;
     border-radius: 10px;
     background-color: #ffffff;
-    font-size: 1.5em;
+    font-size: 1.625vw;
     color: #515151;
     box-shadow: 3px 3px 3px #000000;
     transition: all 0.3s;
@@ -223,59 +224,27 @@
     background-repeat: no-repeat;
   }
   /*============================================================================*/
-  #brand-statement {
-    grid-area: 3 / 1 / span 9 / span 9;
-    font-size: 1.5em;
-    text-align: justify;
+  #brand-statement {grid-area: 3 / 1 / span 7 / span 9;}
+  #t-skills {grid-area: 11 / 1 / span 4 / span 9;}
+  #fun-facts {grid-area: 16 / 1 / span 4 / span 9;}
+  #brand-statement, #t-skills, #fun-facts {
+    text-align: center;
+    font-size: 1.25em;
     padding: 1em;
-    margin-bottom: 1em;
     border-radius: 20px;
     background: rgba(40,40,40,0.7);
-    box-shadow: 3px 3px 3px #ffffff;
+    box-shadow: 2px 2px 6px #ffffff;
     transition: all 0.3s;
     overflow: scroll;
   }
 
-
-  #t-skills {grid-area: 12 / 1 / span 4 / span 9;}
-  #fun-facts {grid-area: 16 / 1 / span 5 / span 9;}
-  #t-skills, #fun-facts {
-    display: grid;
-    grid-template: 15px 1fr / 1fr;
-    font-size: 1.25em;
-    padding: 1em;
-    margin-bottom: 1em;
-    border-radius: 20px;
-    background: rgba(40,40,40,0.7);
-    box-shadow: 3px 3px 3px #ffffff;
-    transition: all 0.3s;
+  #t-skills > span, #fun-facts > span {
+    color: #e01a91;
   }
 
   #brand-statement:hover, #t-skills:hover, #fun-facts:hover {
     box-shadow: none;
     background: rgba(0,0,0,0.7);
-  }
-
-  #t-skills > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #t-skills1 {
-    font-size: 1.25em;
-    text-decoration: underline;
-  }
-
-  #fun-facts > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #fun-facts1 {
-    font-size: 1.25em;
-    text-decoration: underline;
   }
 
   /* .css-projects-leave {
@@ -513,7 +482,7 @@
   #brand-statement {
     grid-area: 3 / 2 / span 9 / span 9;
     font-size: 1.125em;
-    text-align: justify;
+    text-align: center;
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 20px;
