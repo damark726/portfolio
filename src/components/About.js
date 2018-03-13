@@ -22,18 +22,16 @@ export default class About extends Component {
 
   renderTechnicalSkills() {
     return(
-      <div id="t-skills">
-        <div id="t-skills1">Technical Skills:</div>
-        <div>HTML, CSS, Javascript, React.js, React Native, Node.js, Express.js, PostgreSQL, Ruby/Ruby on Rails, jQuery, Bootstrap / CSS Grid</div>
+      <div id="t-skills"><span>Technical Skills:</span><br />
+        HTML, CSS, Javascript, React.js, React Native, Node.js, Express.js, PostgreSQL, Ruby/Ruby on Rails, jQuery, Bootstrap, CSS Grid
       </div>
     )
   }
 
   renderPersonalSkills() {
     return(
-      <div id="fun-facts">
-        <div id="fun-facts1">Fun Facts:</div>
-        <div>Proficient in Albanian and Serbo-Croatian / Montenegrin, avid soccer player & fan, love playing video games, watching anime, reading manga, listening to music, and basically any other sport you can think of.</div>
+      <div id="fun-facts"><span>Fun Facts:</span><br />
+        Proficient in Albanian and Serbo-Croatian / Montenegrin, avid soccer player & fan, love playing video games, watching anime, reading manga, listening to music, and basically any other sport you can think of.
       </div>
     )
   }
@@ -41,7 +39,7 @@ export default class About extends Component {
   render() {
     return (
       <div className="About">
-        <div className="active-title"><span className="active-span">About me</span></div>
+        <div id="active-title-about-me"><span className="active-span">About me</span></div>
         <div id="inactive-title-recent-projects" className="inactive-title"><span className="inactive-span" onClick={this.handleClick}>Recent Projects</span></div>
         {this.renderBrandStatement()}
         {this.renderTechnicalSkills()}

@@ -10,6 +10,7 @@ export default class Main extends Component {
     return (
       <div className="Main">
         <div id="photo"></div>
+        <div id="foreground"></div>
         <div id="dm">David Markoc</div>
         <div id="border"></div>
         <div id="text">Front-End Web Developer</div>

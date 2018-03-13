@@ -1,272 +1,547 @@
-html, body {
-  height: 100vh;
-}
+/* CSS for laptop/computer screen */
+@media (min-width: 1030px) and (orientation: landscape) {
 
-@font-face {
-  font-family: custom-font;
-  src: url("./media/font.ttf");
-}
+  html, body {
+    height: 100vh;
+  }
 
-body {
-  background: url("./media/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+  @font-face {
+    font-family: custom-font;
+    src: url("./media/font.ttf");
+  }
 
-.main-span {
-  padding: 5px;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  background-color: #ffffff;
-  font-size: 20px;
-  color: #515151;
-  transition: all 0.3s;
-  box-shadow: 3px 3px 3px #000000;
-  cursor: pointer;
-}
-.main-span:hover {
-  background-color: #515151;
-  color: #ffffff;
-  box-shadow: none;
-}
+  body {
+    background: url("./media/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
 
-.App {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template: 100vh / 45% 55%;
+  .main-span {
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    background-color: #ffffff;
+    font-size: 20px;
+    color: #515151;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 3px #000000;
+    cursor: pointer;
+  }
+  .main-span:hover {
+    background-color: #515151;
+    color: #ffffff;
+    box-shadow: none;
+  }
+
+  .App {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template: 100vh / 45% 55%;
+  }
+  /*============================================================================*/
+  .Main {
+    grid-area: 1 / 1 / span 1 / span 1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: repeat(20, 5%) / repeat(10, 10%);
+  }
+
+  #photo {
+    grid-area: 2 / 3 / span 9 / span 6;
+    background: url("./media/me.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 3px #000000;
+  }
+
+  #foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #666666;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  #dm {
+    grid-area: 11 / 1 / span 2 / span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    text-shadow: 3px 3px 5px #000000;
+    font-family: custom-font;
+  }
+
+  #border {
+    grid-area: 11 / 3 / span 2 / span 6;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  #text {
+    grid-area: 13 / 1 / span 2 / span 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2.5em;
+    text-shadow: 3px 3px 5px #000000;
+    font-family: custom-font;
+  }
+
+  #e-mail {
+    grid-area: 17 / 1 / span 1 / span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-shadow: 3px 3px 5px #000000;
+  }
+
+  #github {
+    grid-area: 18 / 6 / span 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #linkedin {
+    grid-area: 18 / 4 / span 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*============================================================================*/
+  .Projects, .About {
+    grid-area: 1 / 2 / span 1 / span 1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: repeat(20, 1fr) / repeat(10, 1fr);
+  }
+  /*============================================================================*/
+  #active-title-recent-projects, #active-title-about-me {
+    grid-area: 1 / 1 / span 2 / span 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active-span {
+    font-size: 2.25em;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px #000000;
+  }
+
+  #inactive-title-about-me {grid-area: 1 / 8 / span 2 / span 2;}
+  #inactive-title-recent-projects {grid-area: 1 / 1 / span 2 / span 3;}
+  .inactive-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .inactive-span {
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 1.5em;
+    color: #515151;
+    box-shadow: 3px 3px 3px #000000;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .inactive-span:hover {
+    background-color: #515151;
+    color: #ffffff;
+    box-shadow: none;
+  }
+
+  /*============================================================================*/
+  .projects {
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 3px #000000;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .projects:hover {
+    border-width: 8px;
+    box-shadow: none;
+  }
+
+  #project1 {
+    grid-area: 3 / 1 / span 5 / span 4;
+    background: url("./media/manganime.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project2 {
+    grid-area: 3 / 6 / span 5 / span 4;
+    background: url("./media/narflix.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project3 {
+    grid-area: 9 / 1 / span 5 / span 4;
+    background: url("./media/anime.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project4 {
+    grid-area: 9 / 6 / span 5 / span 4;
+    background: url("./media/hangman.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project5 {
+    grid-area: 15 / 1 / span 5 / span 4;
+    background: url("./media/ttt.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project6 {
+    grid-area: 15 / 6 / span 5 / span 4;
+    background: url("./media/mariokart.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /*============================================================================*/
+  #brand-statement {
+    grid-area: 3 / 1 / span 9 / span 9;
+    font-size: 1.5em;
+    text-align: justify;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    background: rgba(40,40,40,0.7);
+    box-shadow: 3px 3px 3px #ffffff;
+    transition: all 0.3s;
+    overflow: scroll;
+  }
+
+
+  #t-skills {grid-area: 12 / 1 / span 4 / span 9;}
+  #fun-facts {grid-area: 16 / 1 / span 5 / span 9;}
+  #t-skills, #fun-facts {
+    display: grid;
+    grid-template: 15px 1fr / 1fr;
+    font-size: 1.25em;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    background: rgba(40,40,40,0.7);
+    box-shadow: 3px 3px 3px #ffffff;
+    transition: all 0.3s;
+  }
+
+  #brand-statement:hover, #t-skills:hover, #fun-facts:hover {
+    box-shadow: none;
+    background: rgba(0,0,0,0.7);
+  }
+
+  #t-skills > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #t-skills1 {
+    font-size: 1.25em;
+    text-decoration: underline;
+  }
+
+  #fun-facts > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fun-facts1 {
+    font-size: 1.25em;
+    text-decoration: underline;
+  }
+
+  /* .css-projects-leave {
+    opacity: 1;
+  }
+
+  .css-projects-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s;
+  } */
+
 }
 /*============================================================================*/
-.Main {
-  grid-area: 1 / 1 / span 1 / span 1;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template: repeat(20, 1fr) / repeat(10, 1fr);
-}
+/* CSS for anything smaller than laptop */
+@media (max-width: 1029px) and (orientation: portrait) {
+  html, body {
+    height: 100vh;
+  }
 
-#photo {
-  grid-area: 2 / 3 / span 9 / span 6;
-  background: url("./media/me.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  box-shadow: 3px 3px 3px #000000;
-}
+  @font-face {
+    font-family: custom-font;
+    src: url("./media/font.ttf");
+  }
 
-#dm {
-  grid-area: 11 / 1 / span 2 / span 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4em;
-  font-family: custom-font;
-}
+  body {
+    background: url("./media/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
 
-#border {
-  grid-area: 11 / 4 / span 2 / span 4;
-  border-bottom: 2px solid #ffffff;
-}
+  .main-span {
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 5vw;
+    background-color: #ffffff;
+    font-size: 5vw;
+    color: #515151;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 3px #000000;
+    cursor: pointer;
+  }
+  .main-span:hover {
+    background-color: #515151;
+    color: #ffffff;
+    box-shadow: none;
+  }
 
-#text {
-  grid-area: 13 / 1 / span 2 / span 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5em;
-  font-family: custom-font;
-}
+  .App {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template: repeat(2, 100vh) / 100vw;
+    overflow: scroll;
+  }
+  /*============================================================================*/
+  .Main {
+    grid-area: 1 / 1 / span 1 / span 1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: repeat(20, 5%) / repeat(10, 10%);
+  }
 
-#e-mail {
-  grid-area: 17 / 1 / span 1 / span 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  text-shadow: 3px 3px 3px #000000;
-}
+  #photo {
+    grid-area: 2 / 2 / span 9 / span 8;
+    background: url("./media/me.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 3px #000000;
+  }
 
-#github {
-  grid-area: 18 / 6 / span 2 / span 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  #foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #666666;
+    z-index: -1;
+    opacity: 0.5;
+  }
 
-#linkedin {
-  grid-area: 18 / 4 / span 2 / span 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*============================================================================*/
-.Projects, .About {
-  grid-area: 1 / 2 / span 1 / span 1;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template: repeat(20, 1fr) / repeat(10, 1fr);
-}
-/*============================================================================*/
-.active-title {
-  grid-area: 1 / 1 / span 2 / span 9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  #dm {
+    grid-area: 11 / 1 / span 2 / span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9vw;
+    text-shadow: 3px 3px 5px #000000;
+    font-family: custom-font;
+  }
 
-.active-span {
-  font-size: 2.25em;
-  color: #ffffff;
-  text-shadow: 3px 3px 3px #000000;
-}
+  #border {
+    grid-area: 11 / 3 / span 2 / span 6;
+    border-bottom: 2px solid #ffffff;
+  }
 
-#inactive-title-about-me {grid-area: 1 / 8 / span 2 / span 2;}
-#inactive-title-recent-projects {grid-area: 1 / 1 / span 2 / span 3;}
-.inactive-title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+  #text {
+    grid-area: 13 / 1 / span 2 / span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    text-shadow: 3px 3px 5px #000000;
+    font-family: custom-font;
+  }
 
-.inactive-span {
-  padding: 5px;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  background-color: #ffffff;
-  font-size: 1.5em;
-  color: #515151;
-  box-shadow: 3px 3px 3px #000000;
-  transition: all 0.3s;
-  cursor: pointer;
-}
+  #e-mail {
+    grid-area: 16 / 1 / span 1 / span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    text-shadow: 3px 3px 5px #000000;
+  }
 
-.inactive-span:hover {
-  background-color: #515151;
-  color: #ffffff;
-  box-shadow: none;
-}
+  #linkedin {
+    grid-area: 17 / 3 / span 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/*============================================================================*/
-.projects {
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  box-shadow: 3px 3px 3px #000000;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.projects:hover {
-  border-width: 8px;
-  box-shadow: none;
-}
+  #github {
+    grid-area: 17 / 7 / span 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*============================================================================*/
+  .Projects, .About {
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: repeat(20, 5%) / repeat(11, 1fr);
+    font-size: 5vw;
+  }
+  /*============================================================================*/
+  #active-title-recent-projects {grid-area: 1 / 2 / span 2 / span 5;}
+  #active-title-about-me {grid-area: 1 / 6 / span 2 / span 5;}
+  #active-title-recent-projects, #active-title-about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-#project1 {
-  grid-area: 3 / 1 / span 5 / span 4;
-  background: url("./media/manganime.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+  #inactive-title-about-me {grid-area: 1 / 6 / span 2 / span 5;}
+  #inactive-title-recent-projects {grid-area: 1 / 2 / span 2 / span 5;}
+  .inactive-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-#project2 {
-  grid-area: 3 / 6 / span 5 / span 4;
-  background: url("./media/narflix.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+  .active-span {
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #515151;
+    font-size: 5vw;
+    color: #ffffff;
+  }
 
-#project3 {
-  grid-area: 9 / 1 / span 5 / span 4;
-  background: url("./media/anime.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  .inactive-span {
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 5vw;
+    color: #515151;
+    box-shadow: 3px 3px 3px #000000;
+  }
+  /*============================================================================*/
+  .projects {
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 3px #000000;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .projects:hover {
+    border-width: 8px;
+    box-shadow: none;
+  }
 
-#project4 {
-  grid-area: 9 / 6 / span 5 / span 4;
-  background: url("./media/hangman.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  #project1 {
+    grid-area: 3 / 2 / span 5 / span 4;
+    background: url("./media/manganime.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-#project5 {
-  grid-area: 15 / 1 / span 5 / span 4;
-  background: url("./media/ttt.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+  #project2 {
+    grid-area: 3 / 7 / span 5 / span 4;
+    background: url("./media/narflix.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-#project6 {
-  grid-area: 15 / 6 / span 5 / span 4;
-  background: url("./media/mariokart.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-/*============================================================================*/
-#brand-statement {
-  grid-area: 3 / 1 / span 9 / span 9;
-  font-size: 1.5em;
-  text-align: justify;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 20px;
-  background: rgba(40,40,40,0.7);
-  box-shadow: 3px 3px 3px #ffffff;
-  transition: all 0.3s;
-  overflow: scroll;
-}
+  #project3 {
+    grid-area: 9 / 2 / span 5 / span 4;
+    background: url("./media/anime.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project4 {
+    grid-area: 9 / 7 / span 5 / span 4;
+    background: url("./media/hangman.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project5 {
+    grid-area: 15 / 2 / span 5 / span 4;
+    background: url("./media/ttt.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #project6 {
+    grid-area: 15 / 7 / span 5 / span 4;
+    background: url("./media/mariokart.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /*============================================================================*/
+  #brand-statement {
+    grid-area: 3 / 2 / span 9 / span 9;
+    font-size: 1.125em;
+    text-align: justify;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    background: rgba(40,40,40,0.7);
+    box-shadow: 3px 3px 3px #ffffff;
+    overflow: scroll;
+  }
 
 
-#t-skills {grid-area: 12 / 1 / span 4 / span 9;}
-#fun-facts {grid-area: 16 / 1 / span 5 / span 9;}
-#t-skills, #fun-facts {
-  display: grid;
-  grid-template: 15px 1fr / 1fr;
-  font-size: 1.25em;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 20px;
-  background: rgba(40,40,40,0.7);
-  box-shadow: 3px 3px 3px #ffffff;
-  transition: all 0.3s;
-}
+  #t-skills {grid-area: 12 / 2 / span 4 / span 9;}
+  #fun-facts {grid-area: 16 / 2 / span 5 / span 9;}
+  #t-skills, #fun-facts {
+    text-align: center;
+    font-size: 1.125em;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    background: rgba(40,40,40,0.7);
+    box-shadow: 3px 3px 3px #ffffff;
+    overflow: scroll;
+  }
 
-#brand-statement:hover, #t-skills:hover, #fun-facts:hover {
-  box-shadow: none;
-  background: rgba(0,0,0,0.7);
-}
+  #t-skills > span, #fun-facts > span {
+    color: #e01a91;
+  }
 
-#t-skills > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#t-skills1 {
-  font-size: 1.25em;
-  text-decoration: underline;
-}
-
-#fun-facts > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#fun-facts1 {
-  font-size: 1.25em;
-  text-decoration: underline;
-}
-
-.css-projects-leave {
-  opacity: 1;
-}
-
-.css-projects-leave-active {
-  opacity: 0;
-  transition: opacity 0.5s;
+  #brand-statement:hover, #t-skills:hover, #fun-facts:hover {
+    box-shadow: none;
+    background: rgba(0,0,0,0.7);
+  }
 }

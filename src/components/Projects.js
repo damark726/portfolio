@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 export default class Projects extends Component {
   constructor(props) {
@@ -9,6 +9,7 @@ export default class Projects extends Component {
       about: this.props.about
     }
     this.handleClick = this.handleClick.bind(this);
+    this.openProject1 = this.openProject1.bind(this);
   }
 
   handleClick() {
@@ -25,7 +26,7 @@ export default class Projects extends Component {
   render() {
     return (
       <div className="Projects">
-        <div className="active-title"><span className="active-span">Recent Projects</span></div>
+        <div id="active-title-recent-projects"><span className="active-span">Recent Projects</span></div>
         <div id="inactive-title-about-me" className="inactive-title"><span className="inactive-span" onClick={this.handleClick}>About me</span></div>
         {/* <ReactCSSTransitionGroup transitionName="css-projects" transitionEnterTimeout={300} transitionLeaveTimeout={300}> */}
           <div className="projects" id="project1" onClick={this.openProject1}></div>
